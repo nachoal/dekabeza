@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_05_13_182237) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "chatroom_users", force: :cascade do |t|
     t.integer "chatroom_id"
     t.integer "user_id"

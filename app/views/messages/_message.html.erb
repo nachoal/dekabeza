@@ -1,1 +1,2 @@
-<div><strong><%= message.user.username %>:</strong> <%= message.body %></div>
+
+<div><strong><%= "#{message.user.username}:" if message.body != "#{message.user.username} has joined the channel" %></strong> <%= message.body %></div>
