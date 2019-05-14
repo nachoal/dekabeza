@@ -7,5 +7,6 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: redis://redistogo:e4a9c4f515a88d92032a975296ec3b12@hammerjaw.redistogo.com:9065/
   channel_prefix: dekabeza_production
