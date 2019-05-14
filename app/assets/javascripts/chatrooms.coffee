@@ -1,4 +1,8 @@
 $(document).on "turbolinks:load", ->
+  $(".join-now").on "click", (e) ->
+    cr_id = e.currentTarget.attributes[1].value
+    body  = $("#current_user")[0].innerText + "has joined the channel"
+    App.chatrooms.send_message(cr_id, body)
   $("#new_message").on "keypress", (e) ->
     if e && e.keyCode == 13
       e.preventDefault()
